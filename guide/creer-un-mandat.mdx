@@ -1,0 +1,47 @@
+---
+title: "Créer un mandat"
+description: "Comment créer un mandat et générer automatiquement la liste de documents requis."
+---
+
+## Créer un nouveau mandat
+
+1. Cliquez sur **Mandats** dans le menu de gauche
+2. Cliquez sur **Nouveau mandat**
+3. Remplissez les informations:
+
+| Champ | Description |
+|-------|-------------|
+| **Client** | Sélectionnez un client existant ou créez-en un nouveau |
+| **Type de mandat** | T1, T2, Tenue de livres, Compilation, TPS/TVQ |
+| **Période** | Date de début et de fin du mandat |
+| **Échéance** | Date limite de production |
+
+4. Cliquez sur **Créer le mandat**
+
+## Checklist automatique
+
+Quand vous créez un mandat, Coalesc génère automatiquement la liste de documents requis selon:
+
+- **Le type de mandat**: un mandat T1 demande des feuillets fiscaux (T4, RL-1, etc.), un mandat de tenue de livres demande des relevés bancaires
+- **La période**: pour un mandat de tenue de livres de janvier à décembre, le système génère 12 items de relevés bancaires (un par mois)
+- **L'historique du client**: si vous avez déjà fait un mandat du même type pour ce client, la checklist reprend la configuration précédente
+
+## Documents mensuels et trimestriels
+
+Certains documents se répètent dans le temps:
+
+- **Relevés bancaires**: un par mois de la période
+- **Relevés de carte de crédit**: un par mois de la période
+- **TPS/TVQ**: un par trimestre
+
+Par exemple, un mandat de tenue de livres de janvier à juin génère automatiquement:
+- 6 relevés bancaires (janvier à juin)
+- 6 relevés de carte de crédit (janvier à juin)
+
+## Modifier la période
+
+Cliquez directement sur les dates dans l'en-tête du mandat pour les modifier.
+
+## Client récurrent
+
+Quand vous créez un nouveau mandat pour un client qui a déjà eu un mandat du même type, Coalesc copie la checklist du mandat précédent. Les documents marqués comme optionnels restent optionnels.
