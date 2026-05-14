@@ -17,19 +17,26 @@
     "name": "Essayer Coalesc",
     "url": "https://app.coalesc.ai/sign-up"
   },
-  "navigation": [
-    {
-      "group": "Guide",
-      "pages": [
-        "guide/introduction",
-        "guide/creer-un-mandat",
-        "guide/checklist-documents",
-        "guide/connecter-courriel",
-        "guide/portail-client",
-        "guide/suivi-dossier"
-      ]
-    }
-  ],
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Pour commencer",
+            "pages": [
+              "guide/introduction",
+              "guide/creer-un-mandat",
+              "guide/checklist-documents",
+              "guide/connecter-courriel",
+              "guide/portail-client",
+              "guide/suivi-dossier"
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "footerSocials": {
     "linkedin": "https://www.linkedin.com/company/coalesc"
   }
