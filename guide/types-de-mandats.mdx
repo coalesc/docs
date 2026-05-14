@@ -1,26 +1,32 @@
 ---
 title: "Types de mandats"
-description: "Les 6 types de mandats supportés par Coalesc et leurs différences."
+description: "Les 6 types de mandats supportés par Coalesc, leurs différences et à quelle fréquence les produire."
 ---
 
 ## Vue d'ensemble
 
 Coalesc supporte 6 types de mandats. Chaque type détermine quels documents apparaissent dans le sélecteur et comment la checklist est générée.
 
-## T1 — Déclaration de revenus des particuliers
+## Comprendre les types de mandats
 
-La déclaration de revenus personnelle annuelle. C'est le mandat le plus courant pendant la saison des impôts (janvier à avril).
+### T1 — Déclaration de revenus des particuliers
+
+La déclaration de revenus personnelle au fédéral, pour une personne physique. C'est le mandat le plus courant pendant la saison des impôts (janvier à avril).
+
+**Fréquence:** 1 fois par année
 
 **Documents typiques:** feuillets fiscaux (T4, RL-1, T5, etc.), reçus de déductions (frais médicaux, dons, REER), formulaires (T2125 pour travailleurs autonomes, T776 pour revenus de location).
 
 **Particularités:**
 - ~56 types de documents disponibles
-- La checklist est personnalisée par le questionnaire client (le client répond à des questions simples, la liste de documents s'adapte)
+- La checklist est personnalisée par le questionnaire client
 - Documents de l'année précédente repris automatiquement pour les clients récurrents
 
-## T2 — Déclaration de revenus des sociétés
+### T2 — Déclaration de revenus des sociétés
 
-La déclaration de revenus corporative annuelle.
+La déclaration de revenus d'une société incorporée. Produite annuellement après la fin de l'année fiscale de l'entreprise.
+
+**Fréquence:** 1 fois par année (date varie selon la fin d'année fiscale)
 
 **Documents typiques:** états financiers, grand livre, relevés bancaires, TPS/TVQ, sommaires de paie, factures fournisseurs, procès-verbaux.
 
@@ -29,9 +35,11 @@ La déclaration de revenus corporative annuelle.
 - TPS/TVQ générée trimestriellement
 - Documents de gouvernance (procès-verbaux, assurances, permis)
 
-## Tenue de livres
+### Tenue de livres
 
-La comptabilité récurrente (mensuelle, trimestrielle ou annuelle).
+Le suivi comptable courant d'une entreprise: enregistrer les ventes, les dépenses, les transactions bancaires, la paie, les taxes. C'est le travail régulier qui alimente tous les autres mandats.
+
+**Fréquence:** mensuelle, trimestrielle ou annuelle selon le client
 
 **Documents typiques:** relevés bancaires, relevés de carte de crédit, factures fournisseurs, grand livre, TPS/TVQ, sommaires de paie.
 
@@ -44,9 +52,15 @@ La comptabilité récurrente (mensuelle, trimestrielle ou annuelle).
 Pour un mandat de tenue de livres de janvier à décembre, sélectionner "Relevé bancaire" génère automatiquement 12 items dans la checklist (un par mois).
 </Tip>
 
-## Mission de compilation
+### Mission de compilation
 
-La préparation d'états financiers (avis au lecteur, mission d'examen).
+Un CPA prend les informations financières que l'entreprise lui fournit et les met en forme en états financiers, sans les vérifier ni donner d'assurance sur leur exactitude. Le comptable s'assure que la présentation est correcte et que les calculs sont arithmétiquement exacts.
+
+Au Canada, le résultat est souvent accompagné d'un « avis au lecteur » qui indique qu'il n'y a pas d'assurance exprimée.
+
+**Fréquence:** 1 fois par année (après la fin d'exercice)
+
+**À quoi ça sert:** obtenir des états financiers propres et lisibles pour la direction, les banques ou la préparation des impôts, quand une vérification complète n'est pas nécessaire. C'est moins coûteux et plus rapide qu'un audit.
 
 **Documents typiques:** états financiers, grand livre, relevés bancaires, factures fournisseurs, contrats, procès-verbaux, amortissement, assurances.
 
@@ -55,9 +69,11 @@ La préparation d'états financiers (avis au lecteur, mission d'examen).
 - Relevés bancaires et cartes de crédit mensuels
 - Documents d'amortissement et états financiers annuels
 
-## TPS/TVQ
+### TPS/TVQ
 
-Les déclarations de taxes à la consommation.
+Les déclarations de taxes de vente que l'entreprise collecte et remet au gouvernement, avec calcul de la taxe nette à payer ou à récupérer.
+
+**Fréquence:** mensuelle, trimestrielle ou annuelle selon les ventes taxables de l'entreprise
 
 **Documents typiques:** déclarations de TPS/TVQ.
 
@@ -65,11 +81,48 @@ Les déclarations de taxes à la consommation.
 - Documents générés trimestriellement selon la période
 - Peut être combiné avec un mandat de tenue de livres
 
-## Autre
+### Autre
 
 Pour les mandats qui ne rentrent pas dans les catégories précédentes. Aucun document n'est pré-sélectionné. Vous ajoutez manuellement les documents nécessaires.
 
-## Comparaison rapide
+## Compilation vs Examen vs Audit
+
+| | Compilation | Examen | Audit |
+|---|-------------|--------|-------|
+| **Assurance** | Aucune | Limitée | Raisonnable |
+| **Travail du comptable** | Mise en forme des données | Vérifications ciblées | Vérifications approfondies |
+| **Résultat** | Avis au lecteur | Rapport d'examen | Rapport d'audit |
+| **Coût** | Le moins cher | Intermédiaire | Le plus cher |
+| **Quand l'utiliser** | Direction, petites entreprises | Banques, prêteurs | Investisseurs, réglementations |
+
+<Info>
+Coalesc supporte actuellement la compilation. L'examen et l'audit suivront dans une version future.
+</Info>
+
+## Comment tout s'emboîte
+
+En pratique, la **tenue de livres** est le travail régulier de l'année. Ces données servent ensuite à produire la **T1** ou la **T2** et les déclarations de **TPS/TVQ**. La **compilation** vient plus haut dans la chaîne: elle transforme les données comptables en états financiers formels.
+
+```
+Tenue de livres (continu)
+    ├── T1 ou T2 (annuel)
+    ├── TPS/TVQ (mensuel/trimestriel/annuel)
+    └── Compilation (annuel, si requis)
+```
+
+**Exemple:** Un travailleur autonome au Québec fait sa tenue de livres pendant l'année, produit sa T1 à la fin de l'année, et produit ses déclarations de TPS/TVQ à chaque période requise. Une société incorporée ferait plutôt sa tenue de livres, sa T2, et possiblement une mission de compilation si elle veut des états financiers formels.
+
+## Calendrier typique
+
+| Période | Travail |
+|---------|---------|
+| **Chaque semaine / mois** | Tenue de livres |
+| **Chaque mois / trimestre** | TPS/TVQ |
+| **Chaque année (avril)** | T1 (déclaration personnelle) |
+| **Chaque année (6 mois après fin d'exercice)** | T2 (déclaration corporative) |
+| **Chaque année (après fin d'exercice)** | Mission de compilation |
+
+## Comparaison des documents par type
 
 | Document | T1 | T2 | TDL | Compilation | TPS/TVQ |
 |----------|:--:|:--:|:---:|:-----------:|:-------:|
