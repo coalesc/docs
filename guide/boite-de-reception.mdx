@@ -56,13 +56,29 @@ Pour débloquer un expéditeur:
 
 ## File d'attente de l'agent
 
-Quand la classification automatique n'est pas sûre de son résultat (confiance faible), le document est envoyé dans la **file d'attente de l'agent** pour révision humaine.
+La boîte de réception a deux onglets: **Courriels** et **Brouillons de l'agent**.
 
-Dans la file d'attente, vous pouvez:
-- **Approuver** la classification proposée par l'IA
-- **Corriger** le type de document
-- **Rejeter** et reclassifier manuellement
+### Courriels classifiés
+
+Quand un courriel est traité automatiquement, vous pouvez réviser la classification:
+- **Confirmer**: la classification est correcte
+- **Corriger**: sélectionner le bon type de document
+- **Rejeter**: reclassifier manuellement
+
+### Brouillons de l'agent
+
+L'agent d'intake peut générer des brouillons de réponse automatiques. Chaque brouillon contient:
+- Le client concerné
+- Le type d'action (répondre, demander des documents, escalader, finaliser)
+- Le raisonnement de l'agent
+- Le brouillon de courriel à envoyer
+
+Les brouillons sont regroupés par client et filtrables par statut:
+- **En attente**: brouillons à réviser
+- **Envoyés**: brouillons approuvés et envoyés
+- **Rejetés**: brouillons refusés
+- **Échoués**: erreurs d'envoi
 
 <Info>
-Plus vous utilisez Coalesc, plus la classification s'améliore. Le système apprend de vos corrections.
+Plus vous utilisez Coalesc, plus la classification et les brouillons s'améliorent. Le système apprend de vos corrections.
 </Info>

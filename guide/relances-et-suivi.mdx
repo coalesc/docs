@@ -59,3 +59,19 @@ Chaque lundi à 8h, Coalesc envoie un résumé par courriel contenant:
 - Les nouveaux documents reçus
 
 Ce résumé est activé par défaut et peut être désactivé dans les paramètres.
+
+## Niveaux d'urgence
+
+La page Manquants classe automatiquement les mandats en trois niveaux:
+
+| Niveau | Couleur | Condition |
+|--------|---------|-----------|
+| **En retard** | Rouge | L'échéance est dépassée |
+| **À venir** | Neutre | Échéance dans le futur, plus de 3 documents manquants |
+| **Presque terminé** | Vert | 3 documents ou moins manquants |
+
+Les mandats en retard apparaissent en premier, triés par nombre de jours de retard. Les mandats "presque terminés" apparaissent en dernier.
+
+## Relancer depuis la page Manquants
+
+Pour chaque mandat avec des documents manquants, un bouton **Relancer** permet d'envoyer un courriel au client directement depuis la page, pré-rempli avec la liste des documents manquants.
