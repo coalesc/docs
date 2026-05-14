@@ -34,16 +34,26 @@
             ]
           },
           {
+            "group": "Fonctionnalités",
+            "pages": [
+              "guide/gestion-clients",
+              "guide/mandats-en-profondeur",
+              "guide/boite-de-reception",
+              "guide/questionnaires",
+              "guide/relances-et-suivi",
+              "guide/outils",
+              "guide/exportation"
+            ]
+          },
+          {
             "group": "Référence",
             "pages": [
               "guide/types-de-mandats",
               "guide/types-de-documents",
               "guide/fonctionnement",
-              "guide/questionnaires",
-              "guide/outils",
+              "guide/charte-de-comptes",
               "guide/roles-permissions",
-              "guide/parametres",
-              "guide/charte-de-comptes"
+              "guide/parametres"
             ]
           }
         ]

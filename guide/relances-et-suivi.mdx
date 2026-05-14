@@ -1,0 +1,61 @@
+---
+title: "Relances et suivi"
+description: "Comment suivre les documents manquants et configurer les relances automatiques."
+---
+
+## Page Manquants
+
+La page **Manquants** dans le menu de gauche vous donne une vue d'ensemble de tous les mandats avec des documents en attente.
+
+Pour chaque mandat en attente, vous voyez:
+- Le nom du client
+- Le type de mandat
+- Le nombre de documents manquants
+- L'échéance
+- La date de la dernière relance envoyée
+- Le nombre de relances déjà envoyées
+
+## Relances automatiques
+
+Coalesc peut envoyer des rappels automatiques aux clients qui n'ont pas fourni tous leurs documents.
+
+### Configuration
+
+Dans **Paramètres**, configurez:
+- **Intervalle**: nombre de jours entre chaque relance (défaut: 7 jours)
+- **Maximum**: nombre maximum de relances avant d'arrêter (défaut: 3)
+
+### Comment ça fonctionne
+
+1. Un mandat est créé et la demande de documents est envoyée
+2. Après l'intervalle configuré (ex: 7 jours), si des documents manquent, une première relance est envoyée automatiquement
+3. Si après un autre intervalle le client n'a toujours pas répondu, une deuxième relance est envoyée
+4. Après le nombre maximum de relances, le système arrête et le mandat apparaît dans la page Manquants pour action manuelle
+
+### Contenu des relances
+
+Les relances sont envoyées au nom de votre cabinet et rappellent au client:
+- Les documents encore manquants
+- L'échéance de production
+- Le lien pour déposer ses documents
+
+<Info>
+Vous recevez une notification quand une relance automatique est envoyée (configurable dans les paramètres).
+</Info>
+
+## Relances manuelles
+
+Depuis un mandat, vous pouvez aussi envoyer une relance manuellement:
+1. Ouvrez le mandat
+2. Cliquez sur **Envoyer la demande**
+3. Le courriel est envoyé avec la liste des documents manquants
+
+## Résumé hebdomadaire
+
+Chaque lundi à 8h, Coalesc envoie un résumé par courriel contenant:
+- Le nombre de mandats en attente de documents
+- Les mandats proches de l'échéance
+- Les relances envoyées la semaine précédente
+- Les nouveaux documents reçus
+
+Ce résumé est activé par défaut et peut être désactivé dans les paramètres.

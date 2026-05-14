@@ -1,0 +1,68 @@
+---
+title: "Boîte de réception"
+description: "Comment Coalesc traite les courriels entrants et vous aide à classifier les documents."
+---
+
+## Comment fonctionne la boîte de réception
+
+Quand vous connectez votre courriel (Gmail ou Outlook), Coalesc surveille les messages entrants toutes les minutes. Les courriels avec des pièces jointes apparaissent dans la boîte de réception de Coalesc.
+
+## Filtres
+
+| Filtre | Description |
+|--------|-------------|
+| **Tous** | Tous les courriels reçus |
+| **À traiter** | Courriels pas encore acceptés ou ignorés |
+| **Expéditeur inconnu** | Courriels d'expéditeurs qui ne sont pas dans votre liste de clients |
+| **Traités** | Courriels dont les pièces jointes ont été classifiées et assignées |
+| **Ignorés** | Courriels marqués comme non pertinents |
+
+## Actions sur un courriel
+
+### Accepter
+
+Quand vous acceptez un courriel:
+1. Les pièces jointes sont extraites
+2. Chaque document est classifié automatiquement (T4, relevé bancaire, facture, etc.)
+3. Si l'expéditeur correspond à un client, les documents sont associés à son mandat actif
+4. La checklist du mandat se met à jour automatiquement
+
+### Assigner
+
+Si l'expéditeur n'est pas reconnu, vous pouvez manuellement assigner le courriel:
+- Sélectionnez le **client** destinataire
+- Sélectionnez le **mandat** concerné
+- Les documents seront classifiés et ajoutés au dossier
+
+### Ignorer
+
+Marquez un courriel comme non pertinent (publicités, courriels internes, etc.). Les courriels ignorés sont masqués par défaut.
+
+### Opérations en lot
+
+Sélectionnez plusieurs courriels et effectuez des actions en lot:
+- Accepter plusieurs courriels d'un coup
+- Ignorer plusieurs courriels
+- Assigner plusieurs courriels au même client
+
+## Expéditeurs ignorés
+
+Si vous ignorez régulièrement les courriels d'un même expéditeur (ex: une newsletter), Coalesc peut automatiquement ignorer les futurs courriels de cet expéditeur.
+
+Pour débloquer un expéditeur:
+1. Allez dans **Boîte de réception** > menu de filtre
+2. Trouvez l'expéditeur dans la liste des ignorés
+3. Cliquez sur **Débloquer**
+
+## File d'attente de l'agent
+
+Quand la classification automatique n'est pas sûre de son résultat (confiance faible), le document est envoyé dans la **file d'attente de l'agent** pour révision humaine.
+
+Dans la file d'attente, vous pouvez:
+- **Approuver** la classification proposée par l'IA
+- **Corriger** le type de document
+- **Rejeter** et reclassifier manuellement
+
+<Info>
+Plus vous utilisez Coalesc, plus la classification s'améliore. Le système apprend de vos corrections.
+</Info>

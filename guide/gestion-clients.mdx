@@ -1,0 +1,92 @@
+---
+title: "Gestion des clients"
+description: "Comment créer et gérer vos clients, leurs informations personnelles et leurs relations."
+---
+
+## Créer un client
+
+1. Allez dans **Clients** dans le menu de gauche
+2. Cliquez sur **Nouveau client**
+3. Remplissez les informations de base
+
+### Informations requises
+
+| Champ | Description |
+|-------|-------------|
+| **Nom** | Nom complet du client (particulier) ou raison sociale (entreprise) |
+| **Courriel** | Adresse courriel principale (utilisée pour les communications et l'identification automatique des courriels entrants) |
+| **Type** | Particulier ou Corporatif |
+
+### Informations optionnelles
+
+| Champ | Particulier | Corporatif |
+|-------|:-----------:|:----------:|
+| Numéro de client | x | x |
+| Date de naissance | x | |
+| Date d'incorporation | | x |
+| Fin d'année fiscale | | x |
+| Langue préférée | x | x |
+| Entreprise | x | |
+
+## Identifiants fiscaux
+
+Chaque client peut avoir plusieurs identifiants fiscaux:
+
+| Type | Description | Exemple |
+|------|-------------|---------|
+| **NAS** | Numéro d'assurance sociale | 123 456 789 |
+| **NEQ** | Numéro d'entreprise du Québec | 1234567890 |
+| **TPS** | Numéro de TPS | 123456789 RT0001 |
+| **TVQ** | Numéro de TVQ | 1234567890 TQ0001 |
+| **NE** | Numéro d'entreprise fédéral | 123456789 RC0001 |
+
+<Info>
+Les identifiants sont stockés de manière sécurisée et ne sont visibles que par les membres de votre équipe avec les permissions appropriées.
+</Info>
+
+## Adresses
+
+Ajoutez une ou plusieurs adresses à chaque client:
+
+- **Résidentielle**: adresse principale du particulier
+- **Postale**: adresse de correspondance (si différente)
+- **Affaires**: adresse du lieu d'affaires
+
+L'autocomplétion Google Places est intégrée pour faciliter la saisie.
+
+## Relations entre clients
+
+Coalesc permet de lier des clients entre eux:
+
+| Type de relation | Description | Exemple |
+|-----------------|-------------|---------|
+| **Conjoint** | Conjoints ou conjoints de fait | Marie et Jean sont conjoints |
+| **Propriétaire unique** | Particulier propriétaire d'une société | Jean est propriétaire de ABC Inc. |
+| **Administrateur** | Particulier administrateur d'une société | Marie est administratrice de XYZ Inc. |
+
+### Pourquoi les relations sont utiles
+
+- Le questionnaire T1 peut détecter qu'un client a un conjoint et demander ses documents aussi
+- Les déclarations de couple peuvent être traitées ensemble
+- Un administrateur de société peut avoir des mandats T1 et T2 liés
+
+## Groupes de clients
+
+Les groupes permettent d'organiser vos clients et d'envoyer des communications en lot.
+
+### Créer un groupe
+
+1. Allez dans **Clients** > **Groupes**
+2. Cliquez sur **Nouveau groupe**
+3. Nommez le groupe (ex: "T1 2025", "Tenue de livres mensuelle", "Nouveaux clients")
+4. Ajoutez des clients au groupe
+
+### Utilisation des groupes
+
+- **Envoi de masse**: envoyez un courriel ou une demande de documents à tout un groupe
+- **Organisation**: filtrez vos clients par groupe dans la liste des mandats
+- **Saison des impôts**: créez un groupe "T1 2025" avec tous les clients qui doivent faire leur T1
+
+<Tip>
+Un client peut appartenir à plusieurs groupes. Par exemple, "Jean Tremblay" peut être dans le groupe "T1 2025" et "Tenue de livres mensuelle".
+</Tip>

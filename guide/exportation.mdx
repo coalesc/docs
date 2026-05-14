@@ -1,0 +1,50 @@
+---
+title: "Exportation"
+description: "Comment exporter les documents d'un mandat dans un format structuré."
+---
+
+## Exporter les documents d'un mandat
+
+Quand un dossier est complet, vous pouvez exporter tous les documents dans un fichier ZIP structuré.
+
+### Format d'export
+
+Le ZIP est organisé par dossiers:
+
+```
+Client — Mandat.zip
+├── Emploi/
+│   ├── T4 — Revenus d'emploi.pdf
+│   └── RL-1 — Revenus d'emploi.pdf
+├── Revenus/
+│   ├── T5 — Revenus de placements.pdf
+│   └── Relevé de placement.pdf
+├── Déductions/
+│   ├── Reçus de dons.pdf
+│   └── Frais médicaux.pdf
+├── Bancaire/
+│   ├── Relevé bancaire — Janvier 2026.pdf
+│   └── Relevé bancaire — Février 2026.pdf
+└── Divers/
+    └── Avis de cotisation.pdf
+```
+
+### Personnalisation
+
+Dans **Règles** > **Export**, configurez:
+
+| Option | Description |
+|--------|-------------|
+| **Nomenclature des fichiers** | Comment les fichiers sont renommés (ex: `{type} — {année}`) |
+| **Structure des dossiers** | Organisation par catégorie, par type ou flat |
+| **Nomenclature du ZIP** | Format du nom du ZIP (ex: `{client} — {mandat}`) |
+| **Documents non classifiés** | Inclure ou exclure les documents sans type identifié |
+
+### Export Excel des transactions
+
+Pour les mandats avec des relevés bancaires convertis, vous pouvez exporter les transactions en Excel:
+
+1. Ouvrez le mandat
+2. Allez dans l'onglet **Transactions**
+3. Cliquez sur **Exporter**
+4. Le fichier Excel contient: date, description, débit, crédit, solde, code de compte, nom de compte
