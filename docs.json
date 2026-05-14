@@ -39,5 +39,11 @@
   },
   "footerSocials": {
     "linkedin": "https://www.linkedin.com/company/coalesc"
-  }
+  },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/guide/introduction"
+    }
+  ]
 }
