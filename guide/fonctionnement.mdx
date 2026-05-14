@@ -1,0 +1,91 @@
+---
+title: "Fonctionnement en détail"
+description: "Comment Coalesc traite les documents, de la réception à la classification."
+---
+
+## Le cycle d'un document
+
+Quand un document arrive dans Coalesc (par courriel, portail client ou upload manuel), il passe par plusieurs étapes automatiques.
+
+<Steps>
+  <Step title="Réception">
+    Le document est reçu et stocké de manière sécurisée. La source est identifiée (courriel, portail client, upload manuel, triage).
+  </Step>
+  <Step title="Extraction">
+    Le contenu du document est lu. Pour les PDF avec du texte, la lecture est directe. Pour les documents scannés ou les photos, un OCR (reconnaissance optique de caractères) est appliqué.
+  </Step>
+  <Step title="Classification">
+    Le système identifie le type de document (T4, relevé bancaire, facture, etc.) en analysant le contenu extrait. La classification fonctionne en français et en anglais, et reconnaît 71 types de documents.
+  </Step>
+  <Step title="Association">
+    Le document est associé au bon client et au bon mandat. Si le client est reconnu (par son adresse courriel), le document est automatiquement ajouté à son dossier actif.
+  </Step>
+  <Step title="Vérification">
+    Le système vérifie si le document correspond à un item de la checklist. Si oui, l'item passe de "Manquant" à "Reçu" et la barre de progression se met à jour.
+  </Step>
+</Steps>
+
+## Trois couches d'extraction
+
+Coalesc utilise trois niveaux d'extraction pour traiter tous les types de documents:
+
+| Couche | Technologie | Utilisée quand |
+|--------|------------|----------------|
+| **1. Texte direct** | PyMuPDF | PDF avec texte intégré (la majorité des feuillets fiscaux et relevés bancaires) |
+| **2. OCR** | Mistral OCR | Documents scannés, photos, PDF sans texte |
+| **3. Vision** | Gemini Vision | Documents complexes, formulaires manuscrits, documents à angles |
+
+Le système choisit automatiquement la meilleure couche selon la qualité du document.
+
+## Gestion des PDF multiples
+
+Un des problèmes les plus courants: le client envoie un seul PDF contenant plusieurs documents (T4 + RL-1 + relevé bancaire dans le même fichier).
+
+Coalesc détecte automatiquement les documents bundlés et les sépare:
+
+1. Le PDF est analysé page par page
+2. Chaque page est classifiée individuellement
+3. Les pages du même type sont regroupées
+4. Chaque groupe devient un document séparé dans le dossier
+
+## Détection des doublons
+
+Si un client envoie le même document deux fois (par courriel et par le portail, par exemple), Coalesc détecte le doublon et ne le compte qu'une seule fois dans la checklist.
+
+## Extraction de données
+
+Pour certains types de documents, Coalesc extrait les données structurées:
+
+### Relevés bancaires
+Les transactions sont extraites ligne par ligne avec:
+- Date de la transaction
+- Description
+- Montant (débit/crédit)
+- Catégorisation selon la charte de compte de la firme
+
+Le résultat est exportable en Excel, prêt à importer dans votre logiciel comptable.
+
+### Feuillets fiscaux
+Les montants clés sont extraits (revenus, retenues, cotisations) pour validation rapide.
+
+## Relances automatiques
+
+Quand des documents manquent à la checklist, Coalesc peut envoyer des rappels automatiques au client:
+
+- **Premier rappel**: selon le délai configuré après la demande initiale
+- **Deuxième rappel**: si le client n'a toujours pas répondu
+- **Rappel final**: dernier avis avant l'échéance
+
+Les rappels sont envoyés au nom de votre cabinet, pas au nom de Coalesc. Le client voit votre marque.
+
+## Mémoire par client
+
+Coalesc apprend les préférences de chaque client au fil du temps:
+
+- Si vous marquez un document comme **optionnel** pour un client, il restera optionnel l'année prochaine
+- Si vous ajoutez un document spécifique à la checklist d'un client, il sera automatiquement inclus au prochain mandat du même type
+- Les personnalisations sont copiées d'un mandat à l'autre pour le même client
+
+<Info>
+La mémoire fonctionne par client ET par type de mandat. Un client peut avoir des checklists différentes pour son T1 et sa tenue de livres.
+</Info>

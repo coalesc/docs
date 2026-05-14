@@ -1,0 +1,85 @@
+---
+title: "Types de mandats"
+description: "Les 6 types de mandats supportés par Coalesc et leurs différences."
+---
+
+## Vue d'ensemble
+
+Coalesc supporte 6 types de mandats. Chaque type détermine quels documents apparaissent dans le sélecteur et comment la checklist est générée.
+
+## T1 — Déclaration de revenus des particuliers
+
+La déclaration de revenus personnelle annuelle. C'est le mandat le plus courant pendant la saison des impôts (janvier à avril).
+
+**Documents typiques:** feuillets fiscaux (T4, RL-1, T5, etc.), reçus de déductions (frais médicaux, dons, REER), formulaires (T2125 pour travailleurs autonomes, T776 pour revenus de location).
+
+**Particularités:**
+- ~56 types de documents disponibles
+- La checklist est personnalisée par le questionnaire client (le client répond à des questions simples, la liste de documents s'adapte)
+- Documents de l'année précédente repris automatiquement pour les clients récurrents
+
+## T2 — Déclaration de revenus des sociétés
+
+La déclaration de revenus corporative annuelle.
+
+**Documents typiques:** états financiers, grand livre, relevés bancaires, TPS/TVQ, sommaires de paie, factures fournisseurs, procès-verbaux.
+
+**Particularités:**
+- Relevés bancaires et cartes de crédit générés mensuellement selon la période
+- TPS/TVQ générée trimestriellement
+- Documents de gouvernance (procès-verbaux, assurances, permis)
+
+## Tenue de livres
+
+La comptabilité récurrente (mensuelle, trimestrielle ou annuelle).
+
+**Documents typiques:** relevés bancaires, relevés de carte de crédit, factures fournisseurs, grand livre, TPS/TVQ, sommaires de paie.
+
+**Particularités:**
+- Les relevés bancaires et cartes de crédit sont générés **un par mois** selon la période du mandat
+- La TPS/TVQ est générée **un par trimestre**
+- Idéal pour les mandats récurrents avec les mêmes documents chaque période
+
+<Tip>
+Pour un mandat de tenue de livres de janvier à décembre, sélectionner "Relevé bancaire" génère automatiquement 12 items dans la checklist (un par mois).
+</Tip>
+
+## Mission de compilation
+
+La préparation d'états financiers (avis au lecteur, mission d'examen).
+
+**Documents typiques:** états financiers, grand livre, relevés bancaires, factures fournisseurs, contrats, procès-verbaux, amortissement, assurances.
+
+**Particularités:**
+- Inclut les documents de gouvernance (procès-verbaux, contrats)
+- Relevés bancaires et cartes de crédit mensuels
+- Documents d'amortissement et états financiers annuels
+
+## TPS/TVQ
+
+Les déclarations de taxes à la consommation.
+
+**Documents typiques:** déclarations de TPS/TVQ.
+
+**Particularités:**
+- Documents générés trimestriellement selon la période
+- Peut être combiné avec un mandat de tenue de livres
+
+## Autre
+
+Pour les mandats qui ne rentrent pas dans les catégories précédentes. Aucun document n'est pré-sélectionné. Vous ajoutez manuellement les documents nécessaires.
+
+## Comparaison rapide
+
+| Document | T1 | T2 | TDL | Compilation | TPS/TVQ |
+|----------|:--:|:--:|:---:|:-----------:|:-------:|
+| Feuillets fiscaux (T4, RL-1, etc.) | x | | | | |
+| Relevé bancaire (mensuel) | x | x | x | x | |
+| Relevé carte de crédit (mensuel) | x | x | x | x | |
+| TPS/TVQ (trimestriel) | | x | x | x | x |
+| États financiers | | x | | x | |
+| Grand livre | | x | x | x | |
+| Factures fournisseurs | | x | x | x | |
+| Sommaires de paie | | x | x | | |
+| Procès-verbaux | | x | | x | |
+| Assurances | | x | x | x | |
