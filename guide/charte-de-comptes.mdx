@@ -1,0 +1,67 @@
+---
+title: "Charte de comptes"
+description: "Comment configurer votre charte de comptes pour la catégorisation automatique des transactions."
+---
+
+## À quoi sert la charte de comptes?
+
+La charte de comptes (plan comptable) est utilisée par Coalesc pour catégoriser automatiquement les transactions extraites des relevés bancaires. Quand vous convertissez un relevé bancaire en Excel, chaque transaction est associée à un compte de votre charte.
+
+## Configurer votre charte
+
+1. Allez dans **Règles** > **Charte de comptes**
+2. Vous verrez la liste de vos comptes, organisés par catégorie
+
+### Catégories de comptes
+
+| Catégorie | Description | Exemples |
+|-----------|-------------|----------|
+| **Actif** | Ce que l'entreprise possède | Encaisse, comptes à recevoir, équipements |
+| **Passif** | Ce que l'entreprise doit | Comptes à payer, emprunts, taxes à payer |
+| **Capitaux** | Avoir des propriétaires | Capital-actions, bénéfices non répartis |
+| **Revenus** | Argent qui entre | Ventes, honoraires, intérêts |
+| **Dépenses** | Argent qui sort | Loyer, salaires, fournitures, publicité |
+
+### Ajouter un compte
+
+1. Cliquez sur **Ajouter**
+2. Entrez le **code** (ex: 1000, 5400)
+3. Entrez le **nom** (ex: Encaisse, Fournitures de bureau)
+4. Sélectionnez la **catégorie**
+5. Optionnel: associez le compte à un **client spécifique**
+
+### Importer une charte existante
+
+Si vous avez déjà une charte de comptes dans QuickBooks, Sage ou un autre logiciel:
+
+1. Exportez-la en CSV ou Excel
+2. Dans Coalesc, cliquez sur **Importer**
+3. Déposez le fichier
+4. Vérifiez le mapping des colonnes (code, nom, catégorie)
+
+## Charte de base vs charte par client
+
+Coalesc supporte deux niveaux de charte de comptes:
+
+- **Charte de base**: la charte par défaut de votre cabinet, utilisée pour tous les clients
+- **Charte par client**: des comptes supplémentaires ou différents pour un client spécifique
+
+<Info>
+La charte par client hérite de la charte de base. Vous n'avez qu'à ajouter les comptes spécifiques au client.
+</Info>
+
+## Impact sur le convertisseur
+
+Quand vous convertissez un relevé bancaire:
+
+1. Le système lit chaque transaction
+2. Il analyse la description (ex: "LOYER BUREAU 123 RUE MAIN")
+3. Il cherche dans votre charte de comptes le meilleur match
+4. Il assigne le code et le nom du compte à la transaction
+5. Le fichier Excel résultant contient les colonnes **Code de compte** et **Nom de compte**
+
+Plus votre charte est complète, plus la catégorisation sera précise.
+
+## Impact sur la tenue de livres
+
+Pour les mandats de tenue de livres, la charte de comptes détermine aussi comment les documents sont organisés dans le dossier du client et comment les transactions extraites sont classifiées.
