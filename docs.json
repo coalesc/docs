@@ -32,6 +32,14 @@
               "guide/portail-client",
               "guide/suivi-dossier"
             ]
+          },
+          {
+            "group": "Référence",
+            "pages": [
+              "guide/types-de-mandats",
+              "guide/types-de-documents",
+              "guide/fonctionnement"
+            ]
           }
         ]
       }
