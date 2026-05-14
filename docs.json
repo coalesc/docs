@@ -38,7 +38,11 @@
             "pages": [
               "guide/types-de-mandats",
               "guide/types-de-documents",
-              "guide/fonctionnement"
+              "guide/fonctionnement",
+              "guide/questionnaires",
+              "guide/outils",
+              "guide/roles-permissions",
+              "guide/parametres"
             ]
           }
         ]

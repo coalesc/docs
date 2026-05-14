@@ -1,0 +1,53 @@
+---
+title: "Outils"
+description: "Les outils de productivité intégrés à Coalesc: triage de PDF et conversion de relevés bancaires."
+---
+
+## Triage de PDF
+
+Quand un client envoie un gros PDF contenant plusieurs documents (T4 + RL-1 + relevé bancaire dans le même fichier), l'outil de triage les sépare automatiquement.
+
+### Comment ça fonctionne
+
+1. Allez dans **Outils** > **Triage**
+2. Déposez le PDF
+3. Coalesc analyse chaque page et identifie:
+   - Le type de document (T4, relevé bancaire, facture, etc.)
+   - L'émetteur et le destinataire
+   - L'année fiscale
+   - Les montants clés
+4. Les pages sont regroupées par type de document
+5. Chaque groupe peut être importé dans le mandat du client
+
+### Détection de doublons
+
+Si le même document apparaît deux fois (par exemple un T4 reçu par courriel et aussi inclus dans un PDF bundlé), le système le signale.
+
+## Convertisseur de relevés bancaires
+
+Transformez les relevés bancaires PDF en fichiers Excel structurés, prêts à importer dans votre logiciel comptable.
+
+### Comment ça fonctionne
+
+1. Allez dans **Outils** > **Convertisseur** (ou dans un mandat, section Outils)
+2. Déposez un ou plusieurs relevés bancaires (PDF)
+3. Coalesc extrait chaque transaction avec:
+   - Date
+   - Description
+   - Débit / Crédit
+   - Solde courant
+4. Les transactions sont catégorisées selon votre charte de compte
+5. Téléchargez le résultat en Excel
+
+### Options de conversion
+
+| Option | Description |
+|--------|-------------|
+| **Province** | Sélectionnez la province pour les calculs de taxes (TPS/TVQ pour le Québec) |
+| **Tri automatique** | Trier les transactions par date |
+| **Colonne unique** | Combiner débit/crédit en une seule colonne de montant |
+| **Taxes incluses** | Ajouter les colonnes TPS/TVQ au fichier Excel |
+
+### Institutions supportées
+
+Le convertisseur reconnaît les relevés de la majorité des institutions financières canadiennes: Desjardins, TD, RBC, BMO, Banque Nationale, Scotia, CIBC, Wise, et plus.

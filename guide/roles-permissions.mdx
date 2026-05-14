@@ -1,0 +1,71 @@
+---
+title: "Rôles et permissions"
+description: "Les 4 rôles utilisateurs et ce que chacun peut faire dans Coalesc."
+---
+
+Coalesc utilise 4 rôles avec des permissions hiérarchiques. Chaque membre de votre équipe se voit assigner un rôle qui détermine ses accès.
+
+## Propriétaire
+
+Le fondateur ou associé principal du cabinet. Un seul propriétaire par organisation.
+
+- Accès complet à toutes les fonctionnalités
+- Gestion de la facturation
+- Transfert de propriété
+- Gestion de l'équipe et des invitations
+
+## Administrateur
+
+Le gestionnaire de bureau ou associé senior.
+
+- Tout sauf la facturation (lecture seule)
+- Inviter et gérer les membres de l'équipe
+- Gérer les connexions courriel
+- Configurer les paramètres de l'organisation
+- Créer et modifier les questionnaires
+
+## Comptable
+
+Le CPA ou technicien comptable qui fait le travail.
+
+- Boîte de réception: accepter, classifier, envoyer des courriels
+- Clients: créer, modifier, consulter
+- Mandats: créer, modifier, gérer les checklists
+- Documents: consulter, téléverser, télécharger
+- Paramètres: consultation seulement
+
+<Warning>
+Un comptable ne peut pas gérer les connexions courriel, l'équipe ou la facturation.
+</Warning>
+
+## Assistant
+
+Le personnel administratif ou réceptionniste.
+
+- Boîte de réception: consulter et ignorer seulement
+- Clients et mandats: consultation seulement
+- Documents: consulter, téléverser, télécharger
+- Pas d'accès aux paramètres, connexions ou équipe
+
+## Tableau comparatif
+
+| Fonctionnalité | Propriétaire | Admin | Comptable | Assistant |
+|----------------|:------------:|:-----:|:---------:|:---------:|
+| Boîte de réception (accepter, classifier) | x | x | x | |
+| Boîte de réception (consulter, ignorer) | x | x | x | x |
+| Envoyer des courriels | x | x | x | |
+| Clients (créer, modifier) | x | x | x | |
+| Mandats (créer, modifier) | x | x | x | |
+| Documents (téléverser, télécharger) | x | x | x | x |
+| Connexions courriel | x | x | | |
+| Questionnaires (créer, modifier) | x | x | | |
+| Paramètres | x | x | lecture | |
+| Gestion d'équipe | x | x | | |
+| Facturation | x | lecture | | |
+
+## Inviter un membre
+
+1. Allez dans **Paramètres** > **Équipe**
+2. Cliquez sur **Inviter**
+3. Entrez l'adresse courriel et sélectionnez le rôle
+4. Le membre reçoit un courriel d'invitation
